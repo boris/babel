@@ -1,0 +1,32 @@
+<%= form_for @book do |b| %>
+
+  <p>
+  <%= b.label :título %><br>
+  <%= b.text_field :title %>
+  </p>
+
+  <p>
+  <%= b.label :autor %><br>
+  <%= b.text_field :author %>
+  </p>
+
+  <p>
+  <%= b.label :país %><br>
+  <%= b.text_field :country %>
+  </p>
+
+  <p>
+  <%= b.label :editorial %><br>
+  <%= b.text_field :editor %>
+  </p>
+
+  <p>
+  <%= b.label :año %><br>
+  <%= b.text_field :year %>
+  </p>
+
+  <p>
+  <%= b.submit %>
+  </p>
+<% end %>
+
