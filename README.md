@@ -1,4 +1,5 @@
-{rdoc-image:https://s-media-cache-ak0.pinimg.com/236x/7b/c2/fe/7bc2fe1f81c703e25755942d67de8fa4.jpg}
+![](https://s-media-cache-ak0.pinimg.com/236x/7b/c2/fe/7bc2fe1f81c703e25755942d67de8fa4.jpg)
+
 == Motivation
 
 There are A LOT of books in my house, and by "A LOT" I mean more than 4 meters
