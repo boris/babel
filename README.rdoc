@@ -1,28 +1,10 @@
-== README
+{rdoc-image:https://s-media-cache-ak0.pinimg.com/236x/7b/c2/fe/7bc2fe1f81c703e25755942d67de8fa4.jpg}
+== Motivation
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+There are A LOT of books in my house, and by "A LOT" I mean more than 4 meters
+and a half if you put one on top of each other.
 
-Things you may want to cover:
+And all of those books are "tracked" on Google Spreadsheets. Not cool.
 
-* Ruby version
+== What is
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
