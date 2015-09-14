@@ -5,6 +5,13 @@
   <%= link_to 'Login', login_path %><br>
 <% end %>
 
+<h2>Estadísticas:</h2>
+<p>Total de Libros: <%= Book.count %></p>
+<p>
+Leídos: <%= Book.where('read = ?', true).count %></br>
+No Leídos: <%= Book.where('read != ?', true).count %>
+</p>
+
 <p><%= link_to 'Agregar nuevo', new_book_path %></p>
 <table>
   <tr>
@@ -15,14 +22,18 @@
     <th>País</th>
     <th>Editorial</th>
     <th>Año</th>
-    <th></th>
+    <th>Opciones</th>
     <th></th>
   </tr>
 
   <% @book.each do |b| %>
     <tr>
       <td><%= link_to b.id, book_path(b) %></td>
-      <th><%= b.read %>
+      <% if b.read? %>
+	<td>Si</td>
+      <% else %>
+	<td>No</td>
+      <% end %>
       <td><%= b.title %></td>
       <td><%= b.author %></td>
       <td><%= b.country %></td>
