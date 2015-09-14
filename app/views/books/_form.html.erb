@@ -26,6 +26,12 @@
   </p>
 
   <p>
+  <%= b.label :read, 'Leído' %><br>
+  <%= b.radio_button :read, 'Si', :checked => true %><%= label :read, 'Si' %>
+  <%= b.radio_button :read, 'No', :checked => false %><%= label :read, 'No' %>
+  </p>
+
+  <p>
   <%= b.submit %>
   </p>
 <% end %>

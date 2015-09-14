@@ -3,16 +3,20 @@
 <table>
   <tr>
     <th>ID</th>
+    <th>Leído</th>
     <th>Título</th>
     <th>Autor</th>
     <th>País</th>
     <th>Editorial</th>
     <th>Año</th>
+    <th></th>
+    <th></th>
   </tr>
 
   <% @book.each do |b| %>
     <tr>
       <td><%= link_to b.id, book_path(b) %></td>
+      <th><%= b.read %>
       <td><%= b.title %></td>
       <td><%= b.author %></td>
       <td><%= b.country %></td>
