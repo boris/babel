@@ -1,4 +1,10 @@
 <h1>Inventario de Libros</h1>
+<% if current_user %>
+  <h3>Hola, <%= current_user.name %> | <%= link_to 'Logout', logout_path %></h3>
+<% else %>
+  <%= link_to 'Login', login_path %><br>
+<% end %>
+
 <p><%= link_to 'Agregar nuevo', new_book_path %></p>
 <table>
   <tr>
