@@ -1,0 +1,24 @@
+{
+  "application": "foo-app",
+  "repository": "git@github.com:yourname:foo-app.git",
+  "repo_path": "/repo", 
+  "deploy_to": "/home/yourname/apps/foo-app",
+  "branch": "master",
+  "user": "deploy",
+  "shared_paths": [
+    "config/app.json",
+    "pids",
+    "logs"
+  ],
+  "hosts": [
+    "server.app.com"
+  ],
+  "tasks": {
+    "console": "node console.js",
+    "deploy:restart": "npm restart"
+  },
+  "logs": {
+    "express" : "log/express.log", 
+    "workers" : "log/workers.log"
+  }
+}
