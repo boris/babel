@@ -11,10 +11,13 @@ And all of those books are "tracked" on Google Spreadsheets. Not cool.
 This is a very simple Rails application to track the information and "status" of
 my Wife's books.
 
+## Deploy
+I'm using [Lisa](https://github.com/tomas/lisa) to manage the deploy.
+
 ## Roadmap
 
 - ~~Read/Unread books~~
-- ~~User auth ~~
+- ~~User auth~~
 - Add support for borrowed books
 - Add a new theme. The [Stallman style](https://stallman.org) is not cool at
   all.
