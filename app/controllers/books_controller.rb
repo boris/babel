@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+  before_filter :authorize
+
   def index
     @book = Book.all
   end

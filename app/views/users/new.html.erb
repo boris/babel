@@ -1,0 +1,9 @@
+<h1>Crear Cuenta</h1>
+<%= form_for :user, url: '/users' do |u| %>
+  Nombre: <%= u.text_field :name %><br>
+  Email: <%= u.text_field :email %><br>
+  Password: <%= u.password_field :password %><br>
+  Confirmación Password: <%= u.password_field :password_confirmation %><br>
+  
+  <%= u.submit %>
+<% end %>
