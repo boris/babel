@@ -19,3 +19,6 @@
 # Vim files
 *swp
 *swo
+
+# Deploy files
+remote.json
