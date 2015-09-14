@@ -8,9 +8,12 @@ and a half if you put one on top of each other.
 And all of those books are "tracked" on Google Spreadsheets. Not cool.
 
 ## What is this?
+This is a very simple Rails application to track the information and "status" of
+my Wife's books.
 
 ## Roadmap
 
+- ~~Read/Unread books~~
 - Add support for borrowed books
 - Add a new theme. The [Stallman style](https://stallman.org) is not cool at
   all.
