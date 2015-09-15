@@ -13,7 +13,7 @@ No Leídos: <%= Book.where('read != ?', true).count %>
 </p>
 
 <p><%= link_to 'Agregar nuevo', new_book_path %></p>
-<table>
+<table cellspacing="10">
   <tr>
     <th>ID</th>
     <th>Leído</th>
