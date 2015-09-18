@@ -14,10 +14,10 @@ my Wife's books.
 ## Roadmap
 
 - ~~Read/Unread books~~
-- ~~User auth ~~
+- ~~User auth~~
 - Add support for borrowed books
-- Add a new theme. The [Stallman style](https://stallman.org) is not cool at
-  all.
+- ~~Add a new theme. The [Stallman style](https://stallman.org) is not cool at
+  all.~~
 - Add search
 - Add support for CSV upload
 
