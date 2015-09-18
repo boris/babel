@@ -1,48 +1,6 @@
-<h1>Inventario de Libros</h1>
-<% if current_user %>
-  <h3>Hola, <%= current_user.name %> | <%= link_to 'Logout', logout_path %></h3>
-<% else %>
-  <%= link_to 'Login', login_path %><br>
-<% end %>
+<%= render 'header' %>
 
-<h2>Estadísticas:</h2>
-<p>Total de Libros: <%= Book.count %></p>
-<p>
-Leídos: <%= Book.where('read = ?', true).count %></br>
-No Leídos: <%= Book.where('read != ?', true).count %>
-</p>
+<%= render 'stats' %>
 
-<p><%= link_to 'Agregar nuevo', new_book_path %></p>
-<table cellspacing="10">
-  <tr>
-    <th>ID</th>
-    <th>Leído</th>
-    <th>Título</th>
-    <th>Autor</th>
-    <th>País</th>
-    <th>Editorial</th>
-    <th>Año</th>
-    <th>Opciones</th>
-    <th></th>
-  </tr>
+<%= render 'table' %>
 
-  <% @book.each do |b| %>
-    <tr>
-      <td><%= link_to b.id, book_path(b) %></td>
-      <% if b.read? %>
-	<td>Si</td>
-      <% else %>
-	<td>No</td>
-      <% end %>
-      <td><%= b.title %></td>
-      <td><%= b.author %></td>
-      <td><%= b.country %></td>
-      <td><%= b.editor %></td>
-      <td><%= b.year %></td>
-      <td><%= link_to 'Editar', edit_book_path(b) %></dh>
-      <td><%= link_to 'Destroy', book_path(b), 
-	method: :delete,
-	data: { confirm: 'Estás segura?' } %></td>
-    </tr>
-  <% end %>
-</table>
