@@ -8,7 +8,8 @@ DBPASSWD=test123
 aptitude update
 
 echo -e "\n--- Install base packages ---\n"
-aptitude install -y vim curl build-essential python-software-properties git libssl-dev libreadline-dev zlib1g-dev 2>&1
+aptitude install -y vim curl build-essential python-software-properties git
+libssl-dev libreadline-dev zlib1g-dev libmysqlclient-dev libsqlite3-dev nodejs nodejs-dev 2>&1
 
 echo "mysql-server mysql-server/root_password password $DBPASSWD" | debconf-set-selections
 echo "mysql-server mysql-server/root_password_again password $DBPASSWD" | debconf-set-selections
