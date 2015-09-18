@@ -1,0 +1,37 @@
+<div class="panel panel-default">
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Autor</th>
+      <th>Título</th>
+      <th>País</th>
+      <th>Editorial</th>
+      <th>Año</th>
+      <th>¿Leído?</th>
+      <th>Opciones</th>
+      <th></th>
+    </tr>
+
+    <% @book.each do |b| %>
+      <tr>
+	<td><%= link_to b.id, book_path(b) %></td>
+	<td><%= b.author %></td>
+	<td><%= b.title %></td>    
+	<td><%= b.country %></td>
+	<td><%= b.editor %></td>
+	<td><%= b.year %></td>
+	<% if b.read? %>
+	  <td>Si</td>
+	<% else %>
+	  <td>No</td>
+	<% end %>
+	<td>
+	  <%= link_to 'Editar', edit_book_path(b) %> - <%= link_to 'Eliminar', book_path(b), 
+	    method: :delete,
+	    data: { confirm: 'Estás segura?' } %>
+      </td>
+      </tr>
+    <% end %>
+
+  </table>
+</div>
