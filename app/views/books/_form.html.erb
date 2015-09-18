@@ -1,35 +1,35 @@
 <%= form_for @book do |b| %>
 
-  <p>
-  <%= b.label :título %><br>
-  <%= b.text_field :title %>
-  </p>
+  <div class="input-group">
+    <%= b.label :título %><br>
+    <%= b.text_field :title %>
+  </div>
 
-  <p>
-  <%= b.label :autor %><br>
-  <%= b.text_field :author %>
-  </p>
+  <div class="input-group">
+    <%= b.label :autor %><br>
+    <%= b.text_field :author %>
+  </div>
 
-  <p>
-  <%= b.label :país %><br>
-  <%= b.text_field :country %>
-  </p>
+  <div class="input-group">
+    <%= b.label :país %><br>
+    <%= b.text_field :country %>
+  </div>
 
-  <p>
-  <%= b.label :editorial %><br>
-  <%= b.text_field :editor %>
-  </p>
+  <div class="input-group">
+    <%= b.label :editorial %><br>
+    <%= b.text_field :editor %>
+  </div>
 
-  <p>
-  <%= b.label :año %><br>
-  <%= b.text_field :year %>
-  </p>
+  <div class="input-group">
+    <%= b.label :año %><br>
+    <%= b.text_field :year %>
+  </div>
 
-  <p>
+  <div class="input-group"
   <%= b.label :read, 'Leído' %><br>
   <%= b.radio_button :read, '1', :checked => true %><%= label :read, 'Si' %>
   <%= b.radio_button :read, '0', :checked => false %><%= label :read, 'No' %>
-  </p>
+  </div>
 
   <p>
   <%= b.submit %>
