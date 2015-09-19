@@ -23,6 +23,7 @@ namespace :deploy do
       # within release_path do
       #   execute :rake, 'cache:clear'
       # end
+      execute("sudo service unicorn restart")
     end
   end
 
