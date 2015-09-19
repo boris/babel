@@ -1,7 +1,6 @@
 <div class="panel panel-default">
   <table class="table">
     <tr>
-      <th>ID</th>
       <th>Autor</th>
       <th>Título</th>
       <th>País</th>
@@ -14,7 +13,6 @@
 
     <% @book.each do |b| %>
       <tr>
-	<td><%= link_to b.id, book_path(b) %></td>
 	<td><%= b.author %></td>
 	<td><%= b.title %></td>    
 	<td><%= b.country %></td>
