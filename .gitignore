@@ -22,3 +22,5 @@
 
 # Vagrant files
 .vagrant/
+
+config/deploy/config.yml
