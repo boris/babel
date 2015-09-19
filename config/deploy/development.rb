@@ -1,6 +1,6 @@
 set :stage,      :development
 set :rails_env,  'development'
-set :branch,     'mysql'
+set :branch,     'master'
 set :rbenv_ruby, '2.1.0'
 set :deploy_to,  '/home/boris/babel'
 set :user,       'boris'
