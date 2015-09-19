@@ -18,7 +18,7 @@ echo "phpmyadmin phpmyadmin/app-password-confirm password $DBPASSWD" | debconf-s
 echo "phpmyadmin phpmyadmin/mysql/admin-pass password $DBPASSWD" | debconf-set-selections
 echo "phpmyadmin phpmyadmin/mysql/app-pass password $DBPASSWD" | debconf-set-selections
 echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect none" | debconf-set-selections
-aptitude install -y mysql-server-5.5 2>&1
+aptitude install -y mysql-server mysql-client 2>&1
 
 echo -e "\n--- Setting up our MySQL user and db ---\n"
 mysql -uroot -p$DBPASSWD -e "CREATE DATABASE $DBNAME"
