@@ -1,8 +1,9 @@
 class BooksController < ApplicationController
   before_filter :authorize
+  helper_method :sort_column
 
   def index
-    @book = Book.all
+    @book = Book.order(sort_column)
   end
   
   def show
@@ -47,5 +48,9 @@ class BooksController < ApplicationController
   private
   def book_params
     params.require(:book).permit(:title, :author, :country, :editor, :year, :read)
+  end
+
+  def sort_column  
+    params[:sort] || "author"
   end
 end
