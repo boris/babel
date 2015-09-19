@@ -190,7 +190,7 @@ optgroup {
 }
 table {
   padding: 15px;
-  width: 90%;
+  width: 100%;
   border-spacing: 0;
 }
 td,
@@ -2268,8 +2268,8 @@ th {
   text-align: left;
 }
 .table {
-  width: 90%;
-  max-width: 90%;
+  width: 100%;
+  max-width: 100%;
   margin-bottom: 23px;
 }
 .table > thead > tr > th,
