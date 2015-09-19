@@ -21,3 +21,14 @@ my Wife's books.
 - Add search
 - Add support for CSV upload
 
+## Development
+I'm using vagrant for development, so is easy as:
+```
+git clone 
+cd babel
+vagrant up
+```
+
+This vagrant comes with a `bootstrap.sh` file for provisioning. It will install
+all required dependencies for development using sqlite3 and MySQL. If something
+is missing, please let me know! :)
