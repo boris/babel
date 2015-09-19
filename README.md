@@ -11,6 +11,8 @@ And all of those books are "tracked" on Google Spreadsheets. Not cool.
 This is a very simple Rails application to track the information and "status" of
 my Wife's books.
 
+![](https://github.com/boris/babel/blob/sort-table/screenshot.png)
+
 ## Roadmap
 
 - ~~Read/Unread books~~
