@@ -24,3 +24,4 @@
 .vagrant/
 
 config/deploy/config.yml
+config/database.yml
