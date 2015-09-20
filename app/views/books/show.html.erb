@@ -23,4 +23,16 @@
 <%= @book.year %>
 </p>
 
+<p>
+<strong>¿Leído?:</strong> <%= @book.read %>
+</p>
+
+<p>
+<strong>¿Prestado?:</strong> <%= @book.borrowed %>
+</p>
+
+<p>
+<strong>Prestado a: </strong> <%= @book.borrowed_to %>
+</p>
+
 <%= link_to 'Volver', books_path %> - <%= link_to 'Agregar otro libro', new_book_path %>
