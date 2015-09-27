@@ -11,7 +11,7 @@ default: &default
 
 development:
   adapter: mysql2
-  database: babel_dev
+  database: babel_new_dev
   username: dbuser
   password: test123
   host: localhost
