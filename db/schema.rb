@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150920031932) do
+ActiveRecord::Schema.define(version: 20151012230919) do
+
+  create_table "author_books", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "authors", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "country",    limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "books", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -28,9 +40,27 @@ ActiveRecord::Schema.define(version: 20150920031932) do
 
   create_table "borrows", force: :cascade do |t|
     t.boolean  "borrowed"
-    t.text     "who",        limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "borrowed_to",   limit: 255
+    t.datetime "date"
+    t.boolean  "returned"
+    t.datetime "returned_date"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string  "iso",            limit: 255
+    t.string  "name",           limit: 255
+    t.string  "printable_name", limit: 255
+    t.string  "iso3",           limit: 255
+    t.integer "numcode",        limit: 4
+  end
+
+  create_table "editors", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "country_id", limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|

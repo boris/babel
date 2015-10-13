@@ -12,7 +12,7 @@
 
   <div class="input-group">
     <%= b.label :país %><br>
-    <%= b.text_field :country %>
+    <%= b.country_select :@author.country, priority_countries: ["CL", "US", "GB", "AR", "FR", "IT", "ES"] %>
   </div>
 
   <div class="input-group">

@@ -51,7 +51,7 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(:title, :author, :country, :editor, :year, :read, :borrowed, :borrowed_to)
+    params.require(:book).permit(:title, :editor, :year, :read, :borrowed, :borrowed_to, author_attributes: [:author, :country])
   end
 
   def sort_column  
