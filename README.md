@@ -17,11 +17,11 @@ my Wife's books.
 
 - ~~Read/Unread books~~
 - ~~User auth~~
-- Add support for borrowed books
+- ~~Add support for borrowed books~~
 - ~~Add a new theme. The [Stallman style](https://stallman.org) is not cool at
   all.~~
 - Add search
-- Add support for CSV upload
+- ~~Add support for CSV upload~~. Not needed anymore.
 
 ## Development
 I'm using vagrant for development, so is easy as:
