@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'mysql2', '~> 0.3.20'
+gem 'i18n', github: 'svenfuchs/i18n'
 gem 'country_select', github: 'stefanpenner/country_select'
 
 group :development, :test do
