@@ -26,7 +26,6 @@ group :development do
   gem 'capistrano-rails', '~> 1.1.1'
   gem 'capistrano-bundler'
   gem 'capistrano-rbenv'
-  gem 'sqlite3'
 end
 
 group :production do
