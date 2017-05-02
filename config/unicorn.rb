@@ -1,5 +1,5 @@
-root = '/app'
-working_directory root + '/current'
+app_dir = '/app'
+working_directory app_dir 
 
 ENV['SKIP_RAILS'] = '1'
 
@@ -10,10 +10,10 @@ preload_app true
 timeout 30
 
 # Listen on a Unix data socket
-listen root + '/shared/sockets/unicorn.sock', :backlog => 64
+listen '/tmp/unicorn.sock', :backlog => 64
 #listen 8080, :tcp_nopush => true, :backlog => 1024
 
-pid root + "/shared/tmp/pids/unicorn.pid"
+pid "/tmp/unicorn.pid"
 stderr_path "/var/log/unicorn_err.log"
 stdout_path "/var/log/unicorn_out.log"
 ##

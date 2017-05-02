@@ -25,6 +25,7 @@ test:
 
 production:
   <<: *default
-  database: babel-prod_production
-  username: rails
+  database: babel
+  username: root
+  host: 172.17.0.3
   password: <%= ENV['APP_DATABASE_PASSWORD'] %>
