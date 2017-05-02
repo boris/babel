@@ -10,9 +10,9 @@ default: &default
   pool: 5
 
 development:
-  adapter: mysql2
+  adapter: postgresql
   database: babel_dev
-  username: dbuser
+  username: babel
   password: test123
   host: localhost
 
@@ -21,7 +21,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: postgresql
+  #database: postgresql
 
 production:
   <<: *default
