@@ -1,4 +1,4 @@
-app_dir = '/app'
+app_dir = '/home/deploy/app'
 working_directory app_dir 
 
 ENV['SKIP_RAILS'] = '1'
@@ -14,8 +14,8 @@ listen '/tmp/unicorn.sock', :backlog => 64
 #listen 8080, :tcp_nopush => true, :backlog => 1024
 
 pid "/tmp/unicorn.pid"
-stderr_path "/var/log/unicorn_err.log"
-stdout_path "/var/log/unicorn_out.log"
+stderr_path "/tmp/log/unicorn_err.log"
+stdout_path "/tmp/log/unicorn_out.log"
 ##
 # REE
 

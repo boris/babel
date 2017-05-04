@@ -1,0 +1,26 @@
+current directory: /home/deploy/app/vendor/bundle/ruby/2.3.0/gems/unicorn-5.3.0/ext/unicorn_http
+/usr/bin/ruby2.3 -r ./siteconf20170504-17-1ltcio6.rb extconf.rb
+checking for SIZEOF_OFF_T in ruby.h... yes
+checking for SIZEOF_SIZE_T in ruby.h... yes
+checking for SIZEOF_LONG in ruby.h... yes
+checking for rb_str_set_len() in ruby.h... yes
+checking for rb_hash_clear() in ruby.h... yes
+checking for gmtime_r() in time.h... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/deploy/app/vendor/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/unicorn-5.3.0/mkmf.log
+
+current directory: /home/deploy/app/vendor/bundle/ruby/2.3.0/gems/unicorn-5.3.0/ext/unicorn_http
+make "DESTDIR=" clean
+
+current directory: /home/deploy/app/vendor/bundle/ruby/2.3.0/gems/unicorn-5.3.0/ext/unicorn_http
+make "DESTDIR="
+compiling httpdate.c
+compiling unicorn_http.c
+linking shared-object unicorn_http.so
+
+current directory: /home/deploy/app/vendor/bundle/ruby/2.3.0/gems/unicorn-5.3.0/ext/unicorn_http
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 unicorn_http.so ./.gem.20170504-17-1wqmia4

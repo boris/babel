@@ -4,10 +4,13 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
+#default: &default
+#  adapter: postgresql
+#  encoding: unicode
+#  pool: 5
+
 default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
+  adapter: mysql2
 
 development:
   adapter: postgresql
@@ -25,7 +28,7 @@ test:
 
 production:
   <<: *default
-  #database: babel
-  #username: root
-  #host: 172.17.0.3
-  #password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+  database: babel
+  username: babel
+  host: 172.17.0.1
+  password: thebooks #<%= ENV['APP_DATABASE_PASSWORD'] %>

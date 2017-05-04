@@ -12,6 +12,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'mysql2', '~> 0.3.20'
 gem 'i18n', github: 'svenfuchs/i18n'
 gem 'country_select', github: 'stefanpenner/country_select'
+gem 'tzinfo-data'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
