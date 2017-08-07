@@ -5,10 +5,10 @@ DBNAME=babel_dev
 DBUSER=dbuser
 DBPASSWD=test123
 
-aptitude update
+apt-get update
 
 echo -e "\n--- Install base packages ---\n"
-aptitude install -y vim curl build-essential python-software-properties git libssl-dev libreadline-dev zlib1g-dev libmysqlclient-dev libsqlite3-dev nodejs nodejs-dev 2>&1
+apt-get install -y vim curl build-essential python-software-properties git libssl-dev libreadline-dev zlib1g-dev libmysqlclient-dev libsqlite3-dev nodejs nodejs-dev 2>&1
 
 echo "mysql-server mysql-server/root_password password $DBPASSWD" | debconf-set-selections
 echo "mysql-server mysql-server/root_password_again password $DBPASSWD" | debconf-set-selections
@@ -17,7 +17,7 @@ echo "phpmyadmin phpmyadmin/app-password-confirm password $DBPASSWD" | debconf-s
 echo "phpmyadmin phpmyadmin/mysql/admin-pass password $DBPASSWD" | debconf-set-selections
 echo "phpmyadmin phpmyadmin/mysql/app-pass password $DBPASSWD" | debconf-set-selections
 echo "phpmyadmin phpmyadmin/reconfigure-webserver multiselect none" | debconf-set-selections
-aptitude install -y mysql-server mysql-client 2>&1
+apt-get install -y mysql-server mysql-client 2>&1
 
 echo -e "\n--- Setting up our MySQL user and db ---\n"
 mysql -uroot -p$DBPASSWD -e "CREATE DATABASE $DBNAME"
