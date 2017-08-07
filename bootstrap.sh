@@ -23,10 +23,10 @@ echo -e "\n--- Setting up our MySQL user and db ---\n"
 mysql -uroot -p$DBPASSWD -e "CREATE DATABASE $DBNAME"
 mysql -uroot -p$DBPASSWD -e "grant all privileges on $DBNAME.* to '$DBUSER'@'localhost' identified by '$DBPASSWD'"
 
-sudo su - vagrant <<EOF
-cd /home/vagrant
-git clone https://github.com/sstephenson/rbenv.git /home/vagrant/.rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /home/vagrant/.bash_profile
-echo 'eval "$(rbenv init -)"' >> /home/vagrant/.bash_profile
-git clone https://github.com/sstephenson/ruby-build.git /home/vagrant/.rbenv/plugins/ruby-build
+sudo su - ubuntu <<EOF
+cd /home/ubuntu
+git clone https://github.com/sstephenson/rbenv.git /home/ubuntu/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /home/ubuntu/.bash_profile
+echo 'eval "$(rbenv init -)"' >> /home/ubuntu/.bash_profile
+git clone https://github.com/sstephenson/ruby-build.git /home/ubuntu/.rbenv/plugins/ruby-build
 EOF
