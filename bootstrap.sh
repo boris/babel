@@ -26,7 +26,7 @@ mysql -uroot -p$DBPASSWD -e "grant all privileges on $DBNAME.* to '$DBUSER'@'loc
 sudo su - ubuntu <<EOF
 cd /home/ubuntu
 git clone https://github.com/sstephenson/rbenv.git /home/ubuntu/.rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /home/ubuntu/.bash_profile
+echo 'export PATH="/home/ubuntu/.rbenv/bin:$PATH"' >> /home/ubuntu/.bash_profile
 echo 'eval "$(rbenv init -)"' >> /home/ubuntu/.bash_profile
 git clone https://github.com/sstephenson/ruby-build.git /home/ubuntu/.rbenv/plugins/ruby-build
 EOF
