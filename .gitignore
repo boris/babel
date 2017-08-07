@@ -28,3 +28,7 @@ config/deploy/config.yml
 config/database.yml
 
 vendor/bundle
+
+# Ubuntu files
+.cache/
+.sudo_as_admin_successful
