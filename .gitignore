@@ -32,3 +32,4 @@ vendor/bundle
 # Ubuntu files
 .cache/
 .sudo_as_admin_successful
+*sql
