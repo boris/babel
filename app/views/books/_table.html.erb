@@ -11,6 +11,9 @@
       <th></th>
     </tr>
 
+    
+    <%= will_paginate @book %>
+
     <% @book.each do |b| %>
       <tr>
 	<td><%= b.author %></td>
