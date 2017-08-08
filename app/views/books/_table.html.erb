@@ -28,9 +28,7 @@
 	  <td>No</td>
 	<% end %>
 	<td>
-	  <%= link_to '🔎', book_path(b) %> <%= link_to '✍', edit_book_path(b) %> <%= link_to '☠', book_path(b), 
-	    method: :delete,
-	    data: { confirm: 'Estás segura?' } %>
+	  <%= link_to '🔎', book_path(b), { :title => "Ver" } %> <%= link_to '✍', edit_book_path(b), { :title => "Editar" } %> <%= link_to '☠', book_path(b), method: :delete, data: { confirm: 'Estás segura?' } %>
       </td>
       </tr>
     <% end %>
