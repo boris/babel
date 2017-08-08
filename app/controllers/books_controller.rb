@@ -8,7 +8,6 @@ class BooksController < ApplicationController
 
   def index
     @book = Book.order(sort_column)
-    @book = @book.paginate(:page => 1, :per_page => 25)
   end
   
   def show

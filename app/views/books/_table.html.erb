@@ -11,9 +11,6 @@
       <th></th>
     </tr>
 
-    
-    <%= will_paginate @book %>
-
     <% @book.each do |b| %>
       <tr>
 	<td><%= b.author %></td>
@@ -32,7 +29,7 @@
 	<% end %>
 	<td>
 	  <%= link_to '🔎', book_path(b), { :title => "Ver" } %> <%= link_to '✍', edit_book_path(b), { :title => "Editar" } %> <%= link_to '☠', book_path(b), method: :delete, data: { confirm: 'Estás segura?' } %>
-      </td>
+	</td>
       </tr>
     <% end %>
 
