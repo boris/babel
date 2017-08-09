@@ -3,6 +3,7 @@
     <tr>
       <th>Autor</th>
       <th>Título</th>
+      <th>Género</th>
       <th>País</th>
       <th>Editorial</th>
       <th>¿Leído?</th>
@@ -15,6 +16,7 @@
       <tr>
 	<td><%= b.author %></td>
 	<td><%= link_to b.title, book_path(b) %></td>
+	<td><%= b.genre %></td>
 	<td><%= b.country_name %></td>
 	<td><%= b.editor %></td>
 	<% if b.read? %>

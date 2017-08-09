@@ -11,6 +11,11 @@
   </div>
 
   <div class="input-group">
+    <%= b.label :género %><br>
+    <%= b.text_field :genre %>
+  </div>
+
+  <div class="input-group">
     <%= b.label :país %><br>
     <%= b.country_select :country, priority_countries: ["CL", "US", "GB", "AR", "FR", "IT", "ES"] %>
   </div>
