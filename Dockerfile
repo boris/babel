@@ -2,7 +2,7 @@ FROM ruby:2.6.5
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-    libmysqlclient-dev \
+    default-libmysqlclient-dev \
     && rm -rf /var/lib/apt/lists/*
 
 EXPOSE 8080
