@@ -1,5 +1,10 @@
-FROM seapy/rails-nginx-unicorn
+FROM rails
 
-EXPOSE 80
+EXPOSE 8080
+WORKDIR /usr/src/app
 
-COPY config/nginx.conf /etc/nginx/sites-enabled/default
+COPY Gemfile* ./
+RUN bundle install
+COPY . .
+
+CMD ["rails", "server", "-b", "0.0.0.0", "--port", "8080"]
