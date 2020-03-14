@@ -30,3 +30,10 @@ echo 'export PATH="/home/vagrant/.rbenv/bin:$PATH"' >> .bash_profile
 echo 'eval "$(rbenv init -)"' >> .bash_profile
 git clone https://github.com/sstephenson/ruby-build.git .rbenv/plugins/ruby-build
 EOF
+
+echo "Install"
+bundle install
+bundle update
+
+echo "Run"
+bundle exec rails s --bind 0.0.0.0
