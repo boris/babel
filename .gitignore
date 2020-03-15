@@ -36,3 +36,6 @@ vendor/bundle
 
 # Public assets
 public/assets/
+
+# Lock file
+Gemfile.lock
