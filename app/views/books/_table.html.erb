@@ -30,7 +30,7 @@
 	  <td>No</td>
 	<% end %>
 	<td>
-	  <%= link_to '✍', edit_book_path(b), { :title => "Editar" } %> <%= link_to '☠', book_path(b), method: :delete, data: { confirm: 'Estás segura?' } %>
+	  <%= link_to '✍', edit_book_path(b), { :title => "Editar" } %> <%= link_to '☠', book_path(b), method: :delete, data: { confirm: 'Este libro será eliminado. Estás segura?' } %>
 	</td>
       </tr>
     <% end %>
