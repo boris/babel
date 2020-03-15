@@ -1,14 +1,21 @@
-<div class="col-xs-4">
-<ul class="list-group">
-  <li class="list-group-item"> <strong>Título:</strong> <%= @book.title %>
-  <li class="list-group-item"> <strong>Autor:</strong> <%= @book.author %>
-  <li class="list-group-item"> <strong>Género:</strong> <%= @book.genre %>
-  <li class="list-group-item"> <strong>País:</strong> <%= @book.country_name %>
-  <li class="list-group-item"> <strong>Editorial:</strong> <%= @book.editor %>
-  <li class="list-group-item"> <strong>Año:</strong> <%= @book.year %>
-  <li class="list-group-item"> <strong>¿Leído?:</strong> <%= @book.read %>
-  <li class="list-group-item"> <strong>¿Prestado?:</strong> <%= @book.borrowed %>
-  <li class="list-group-item"> <strong>Prestado a: </strong> <%= @book.borrowed_to %>
-</ul>
-<%= link_to 'Volver', books_path %> - <%= link_to 'Agregar otro libro', new_book_path %>
+<h1><%= @book.title %>.</h1>
+<h3><%= @book.author %>.</h3>
+<br>
+<div class="row">
+    <div class="col-sm-3">
+        <strong>Género:</strong> <%= @book.genre %> <br>
+        <strong>Editorial:</strong> <%= @book.editor %> <br>
+        <strong>País:</strong> <%= @book.country_name %> <br>
+        <strong>Año:</strong> <%= @book.year %> <br>
+        <br>
+    </div>
+    <div class="col-sm-3">
+        <strong>¿Leído?:</strong> <% if @book.read? %> Si <% else %> No <% end %> <br>
+        <strong>¿Prestado?:</strong> <% if @book.borrowed? %> Si <% else %> No <% end %> <br>
+        <% if @book.borrowed? %>
+            <strong>Prestado a: </strong> <%= @book.borrowed_to %> <br>
+        <% end %>
+    </div>
 </div>
+
+<%= link_to 'Volver', books_path %> - <%= link_to 'Agregar otro libro', new_book_path %>
