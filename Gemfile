@@ -9,11 +9,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
-gem 'mysql2', '~> 0.3.20'
+gem 'mysql2', '~> 0.4.10'
 #gem 'i18n', github: 'svenfuchs/i18n'
 gem 'country_select', github: 'stefanpenner/country_select'
 gem 'tzinfo-data'
 gem 'will_paginate', '~> 3.1.0'
+gem 'execjs'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -36,4 +37,4 @@ group :production do
   gem 'rails_12factor'
 end
 
-ruby "2.6.4"
+ruby "2.6.5"
