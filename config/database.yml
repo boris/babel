@@ -28,7 +28,7 @@ test:
 
 production:
   <<: *default
-  database: babel
-  username: babel
-  host: 172.17.0.1
-  password: thebooks #<%= ENV['APP_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DBNAME'] %>
+  username: <%= ENV['DBUSER'] %>
+  host: <%= ENV['DBHOST'] %>
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
