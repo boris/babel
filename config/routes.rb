@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'borrow/index'
+
   get 'welcome/index'
 
   resources :books

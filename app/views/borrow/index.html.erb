@@ -1,0 +1,20 @@
+<%= render 'books/header' %>
+<h1>Libros Prestados</h1>
+
+<div class="panel panel-default">
+    <table class="table">
+        <tr>
+            <th>Autor</th>
+            <th>Título</th>
+            <th>Morosa(o)</th>
+        </tr>
+
+        <% Book.where('`borrowed` =?', true).each do |b| %>
+            <tr>
+                <td><%= b.author %></td>
+                <td><%= b.title %></td>
+                <td><%= b.borrowed_to %></td>
+            </tr>
+         <% end %>
+    </table>
+</div>

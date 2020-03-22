@@ -1,3 +1,4 @@
+<%= render 'header' %>
 <h1><%= @book.title %>.</h1>
 <h3><%= @book.author %>.</h3>
 <br>
@@ -18,4 +19,3 @@
     </div>
 </div>
 
-<%= link_to 'Volver', books_path %> - <%= link_to 'Agregar otro libro', new_book_path %>
