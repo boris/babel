@@ -2,14 +2,10 @@ class BooksController < ApplicationController
   before_filter :authorize
   helper_method :sort_column
 
-  def borrowed
-
-  end
-
   def index
     @book = Book.order(sort_column)
   end
-  
+
   def show
     @book = Book.find(params[:id])
   end
