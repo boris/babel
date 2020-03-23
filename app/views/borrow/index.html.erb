@@ -7,13 +7,15 @@
             <th>Autor</th>
             <th>Título</th>
             <th>Morosa(o)</th>
+            <th>Editar</th>
         </tr>
 
         <% Book.where('`borrowed` =?', true).each do |b| %>
             <tr>
                 <td><%= b.author %></td>
-                <td><%= b.title %></td>
+                <td><%= link_to b.title, book_path(b) %></td>
                 <td><%= b.borrowed_to %></td>
+                <td><%= link_to '✍', edit_book_path(b), { :title => "Editar" } %></td>
             </tr>
          <% end %>
     </table>
