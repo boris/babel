@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'borrow/index'
+  get 'borrow/borrowed'
+  get 'borrow/read'
+  get 'borrow/unread'
 
   get 'welcome/index'
 
