@@ -1,6 +1,6 @@
 <ul class="list-group">
-  <li class="list-group-item list-group-item-success">Libros Leídos: <%= Book.where('`read` = ?', true).count %></li>
-  <li class="list-group-item list-group-item-danger">Libros No Leídos: <%= Book.where('`read` != ?', true).count %></li>
-  <li class="list-group-item list-group-item-warning"><%= link_to 'Libros Prestados', :controller => 'borrow' %>: <%= Book.where('`borrowed` != ?', false).count %></li>
+    <li class="list-group-item list-group-item-success"><%= link_to 'Libros Leídos', :controller => 'borrow', :action => 'read' %>: <%= Book.where('`read` = ?', true).count %></li>
+  <li class="list-group-item list-group-item-danger"><%= link_to 'Libros No Leídos', :controller => 'borrow', :action => 'unread' %>: <%= Book.where('`read` != ?', true).count %></li>
+  <li class="list-group-item list-group-item-warning"><%= link_to 'Libros Prestados', :controller => 'borrow', :action => 'borrowed' %>: <%= Book.where('`borrowed` != ?', false).count %></li>
   <li class="list-group-item list-group-item-info">Total de Libros: <%= Book.count %></li>
 </ul>
