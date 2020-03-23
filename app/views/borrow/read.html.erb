@@ -1,0 +1,23 @@
+<%= render 'books/header' %>
+
+<ul class="list-group">
+    <li class="list-group-item list-group-item-success">Libros Leídos: <%= Book.where('`read` = ?', true).count %></li>
+</ul>
+<div class="panel panel-default">
+    <table class="table">
+        <tr>
+            <th>Autor</th>
+            <th>Título</th>
+            <th>Editar</th>
+        </tr>
+
+        <% Book.where('`read` =?', true).each do |b| %>
+            <tr>
+                <td><%= b.author %></td>
+                <td><%= link_to b.title, book_path(b) %></td>
+                <td><%= link_to '✍', edit_book_path(b), { :title => "Editar" } %></td>
+            </tr>
+         <% end %>
+    </table>
+</div>
+
