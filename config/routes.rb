@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'borrow/borrowed'
   get 'borrow/read'
   get 'borrow/unread'
+  get 'borrow/random'
 
   get 'welcome/index'
 
