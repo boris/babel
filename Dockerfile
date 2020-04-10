@@ -15,4 +15,4 @@ RUN bundle install
 COPY . .
 ENV RAILS_ENV production
 
-CMD bundle exec rake assets:precompile && bundle exec rails server -b 0.0.0.0 --port 8080
+CMD bundle exec rails db:migrate && bundle exec rake assets:precompile && bundle exec rails server -b 0.0.0.0 --port 8080

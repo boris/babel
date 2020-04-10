@@ -1,6 +1,7 @@
 <%= render 'header' %>
 <h1><%= @book.title %>.</h1>
 <h3><%= @book.author %>.</h3>
+
 <br>
 <div class="row">
     <div class="col-sm-3">
@@ -15,6 +16,10 @@
         <strong>¿Prestado?:</strong> <% if @book.borrowed? %> Si <% else %> No <% end %> <br>
         <% if @book.borrowed? %>
             <strong>Prestado a: </strong> <%= @book.borrowed_to %> <br>
+        <% end %>
+        <strong>Puntuación: </strong>
+        <% @book.rating.to_i.times do %>
+            <i class="material-icons" style="font-size:12px;">star</i>
         <% end %>
     </div>
 </div>
