@@ -8,14 +8,20 @@
         <tr>
             <th>Autor</th>
             <th>Título</th>
+            <th>Puntuación</td>
             <th>Editar</th>
         </tr>
 
-        <% Book.where('`read` =?', true).each do |b| %>
+        <% Book.where('`read` =?', true).order(:author, :title).each do |b| %>
             <tr>
                 <td><%= b.author %></td>
                 <td><%= link_to b.title, book_path(b) %></td>
-                <td><%= link_to '✍', edit_book_path(b), { :title => "Editar" } %></td>
+                <td>
+                    <% b.rating.to_i.times do %>
+                        <i class="material-icons" style="font-size:12px;">star</i>
+                    <% end %>
+                </td>
+                <td><%= link_to edit_book_path(b) do %><i class="material-icons" style="font-size:18px;">edit</i><%end%></td>
             </tr>
          <% end %>
     </table>
