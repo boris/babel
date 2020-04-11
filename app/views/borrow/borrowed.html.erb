@@ -17,7 +17,7 @@
                 <td><%= b.author %></td>
                 <td><%= link_to b.title, book_path(b) %></td>
                 <td><%= b.borrowed_to %></td>
-                <td><%= link_to '✍', edit_book_path(b), { :title => "Editar" } %></td>
+                <td><%= link_to edit_book_path(b) do %><i class="material-icons" style="font-size:18px;">edit</i><%end%></td>
             </tr>
          <% end %>
     </table>
