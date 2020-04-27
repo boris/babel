@@ -13,7 +13,7 @@
       <th></th>
     </tr>
 
-    <% @book.each do |b| %>
+    <% @book.where(user_id: current_user.id).each do |b| %>
       <tr>
 	<td><%= b.author %></td>
     <td><%= link_to b.title, book_path(b) %></td>
