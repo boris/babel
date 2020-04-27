@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200410152921) do
+ActiveRecord::Schema.define(version: 20200414150432) do
 
   create_table "books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "title"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20200410152921) do
     t.text     "borrowed_to", limit: 65535
     t.string   "genre"
     t.integer  "rating"
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_books_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
