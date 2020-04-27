@@ -1,6 +1,6 @@
 <ul class="list-group">
-    <li class="list-group-item list-group-item-success"><%= link_to 'Libros Leídos', :controller => 'borrow', :action => 'read' %>: <%= Book.where('`read` = ?', true).count %></li>
-  <li class="list-group-item list-group-item-danger"><%= link_to 'Libros No Leídos', :controller => 'borrow', :action => 'unread' %>: <%= Book.where('`read` != ?', true).count %></li>
-  <li class="list-group-item list-group-item-warning"><%= link_to 'Libros Prestados', :controller => 'borrow', :action => 'borrowed' %>: <%= Book.where('`borrowed` != ?', false).count %></li>
-  <li class="list-group-item list-group-item-info">Total de Libros: <%= Book.count %></li>
+    <li class="list-group-item list-group-item-success"><%= link_to 'Libros Leídos', :controller => 'borrow', :action => 'read' %>: <%= Book.where({read: true, user_id: current_user.id}).count %></li>
+  <li class="list-group-item list-group-item-danger"><%= link_to 'Libros No Leídos', :controller => 'borrow', :action => 'unread' %>: <%= Book.where(read: false, user_id: current_user.id).count %></li>
+  <li class="list-group-item list-group-item-warning"><%= link_to 'Libros Prestados', :controller => 'borrow', :action => 'borrowed' %>: <%= Book.where(borrowed: true, user_id: current_user.id).count %></li>
+  <li class="list-group-item list-group-item-info">Total de Libros: <%= Book.where(user_id: current_user.id).count %></li>
 </ul>
