@@ -21,7 +21,7 @@
 	</form>
       -->
       <ul class="nav navbar-nav navbar-right">
-	<li class="navbar-text">Hola, <%= current_user.name %>!</li>
+          <li class="navbar-text">Hola, <%= current_user.name %>! (<%= current_user.id %>)</li>
 	<li><a href="<%= logout_path %>">Logout</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
