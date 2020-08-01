@@ -17,6 +17,7 @@
         <% if @book.borrowed? %>
             <strong>Prestado a: </strong> <%= @book.borrowed_to %> <br>
         <% end %>
+        <strong>Número de páginas: </strong> <%= @book.pages %><br>
         <strong>Puntuación: </strong>
         <% @book.rating.to_i.times do %>
             <i class="material-icons" style="font-size:12px;">star</i>
