@@ -1,45 +1,43 @@
 <div class="panel panel-default">
-  <table class="table">
-    <tr>
-      <th>Autor</th>
-      <th>Título</th>
-      <th>Puntuación</th>
-      <th>Género</th>
-      <th>País</th>
-      <th>Editorial</th>
-      <th>¿Leído?</th>
-      <th>¿Prestado?</th>
-      <th>Opciones</th>
-      <th></th>
-    </tr>
+    <table class="table">
+        <tr>
+            <th>Autor</th>
+            <th>Título</th>
+            <th>Puntuación</th>
+            <th>Género</th>
+            <th>Editorial</th>
+            <th>¿Leído?</th>
+            <th>¿Prestado?</th>
+            <th>Opciones</th>
+            <th></th>
+        </tr>
 
-    <% @book.each do |b| %>
-      <tr>
-	<td><%= b.author %></td>
-    <td><%= link_to b.title, book_path(b) %></td>
-    <td>
-    <% b.rating.to_i.times do %>
-        <i class="material-icons" style="font-size:12px;">star</i>
-    <% end %>
-    </td>
-	<td><%= b.genre %></td>
-	<td><%= b.country_name %></td>
-	<td><%= b.editor %></td>
-	<% if b.read? %>
-	  <td>Si</td>
-	<% else %>
-	  <td>No</td>
-	<% end %>
-	<% if b.borrowed? %>
-	  <td>Si</td>
-	<% else %>
-	  <td>No</td>
-	<% end %>
-	<td>
-        <%= link_to edit_book_path(b) do %><i class="material-icons" style="font-size:18px;">edit</i> <%end%> <%= link_to  book_path(b), method: :delete, data: { confirm: 'Este libro será eliminado. Estás segura?' } do%><i class="material-icons" style="font-size:18px;">delete_forever</i> <%end%>
-	</td>
-      </tr>
-    <% end %>
+        <% @book.each do |b| %>
+            <tr>
+                <td><%= b.author %></td>
+                <td><%= link_to b.title, book_path(b) %></td>
+                <td>
+                    <% b.rating.to_i.times do %>
+                        <i class="material-icons" style="font-size:12px;">star</i>
+                    <% end %>
+                </td>
+                <td><%= b.genre %></td>
+                <td><%= b.editor %></td>
+                <% if b.read? %>
+                    <td>Si</td>
+                <% else %>
+                    <td>No</td>
+                <% end %>
+                <% if b.borrowed? %>
+                    <td>Si</td>
+                <% else %>
+                    <td>No</td>
+                <% end %>
+                <td>
+                    <%= link_to edit_book_path(b) do %><i class="material-icons" style="font-size:18px;">edit</i> <%end%> <%= link_to  book_path(b), method: :delete, data: { confirm: 'Este libro será eliminado. Estás segura?' } do%><i class="material-icons" style="font-size:18px;">delete_forever</i> <%end%>
+                </td>
+            </tr>
+        <% end %>
 
-  </table>
+    </table>
 </div>
