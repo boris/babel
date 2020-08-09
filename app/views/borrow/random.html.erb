@@ -1,6 +1,6 @@
 <%= render 'books/header' %>
 
-<% Book.where('`read` is false and `pages` <= 200 and `pages` is not NULL').order("RAND()").limit(1).each do |r| %>
+<% Book.where('`read` is false and `pages` <= 200').order("RAND()").limit(1).each do |r| %>
     <h1><%= r.title %></h1>
     <h3><%= r.author %></h3>
 <% end %>
