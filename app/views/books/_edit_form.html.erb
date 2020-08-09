@@ -1,0 +1,55 @@
+<%= form_for @book do |b| %>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="input-group">
+                <%= b.label :género %>
+                <%= b.text_field :genre %>
+            </div>
+
+            <div class="input-group">
+                <%= b.label :país %>
+                <%= b.country_select :country, priority_countries: ["CL", "US", "GB", "AR", "FR", "IT", "ES"] %>
+            </div>
+
+            <div class="input-group">
+                <%= b.label :editorial %>
+                <%= b.text_field :editor %>
+            </div>
+
+            <div class="input-group">
+                <%= b.label :año %>
+                <%= b.text_field :year %>
+            </div>
+            <div class="input-group">
+                <%= b.label :pages, 'Número de páginas: ' %>
+                <%= b.text_field :pages%>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="input-group">
+                <%= b.label :read, 'Leído' %>
+                <%= b.radio_button :read, '1', :checked => false%><%= label :read, 'Si' %>
+                <%= b.radio_button :read, '0', :checked => true %><%= label :read, 'No' %>
+            </div>
+            <div class="input-group">
+                <%= b.label :borrowed, 'Prestado' %>
+                <%= b.radio_button :borrowed, '1', :checked => false %><%= label :borrowed, 'Si' %>
+                <%= b.radio_button :borrowed, '0', :checked => true %><%= label :borrowed, 'No' %>
+            </div>
+
+            <div class="input-group">
+                <%= b.label :borrowed_to, 'Prestado a: ' %>
+                <%= b.text_field :borrowed_to %>
+            </div>
+
+            <div class="input-group">
+                <%= b.label :rating, 'Puntuación: ' %>
+                <%= b.text_field :rating %>
+            </div>
+
+            <p>
+            <%= b.submit "Guardar" %>
+            </p>
+        </div>
+    <% end %>
+

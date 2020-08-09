@@ -1,5 +1,5 @@
-<h1>Editar Libro</h1>
+<%= render 'header' %>
+<h1>Editar: <%= @book.title %>.</h1>
+<h3><%= @book.author %>.</h3>
 
-<%= render 'form' %>
-
-<%= link_to 'Volver', books_path %>
+<%= render 'edit_form' %>

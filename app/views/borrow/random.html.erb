@@ -3,4 +3,5 @@
 <% Book.where('`read` is false and `pages` <= 200').order("RAND()").limit(1).each do |r| %>
     <h1><%= r.title %></h1>
     <h3><%= r.author %></h3>
+    <%= link_to 'Editar', edit_book_path(r)%>
 <% end %>
