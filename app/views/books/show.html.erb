@@ -1,6 +1,6 @@
 <%= render 'header' %>
 <h1><%= @book.title %>.</h1>
-<h3><%= @book.author %>.</h3>
+<h3><%= @book.author %>. <%= @book.isbn %></h3>
 
 <br>
 <div class="row">
@@ -22,6 +22,9 @@
         <% @book.rating.to_i.times do %>
             <i class="material-icons" style="font-size:12px;">star</i>
         <% end %>
+    </div>
+    <div class="col-sm-3">
+         <%= image_tag("http://covers.openlibrary.org/b/isbn/#{@book.isbn}.jpg", size: "100x200") %>
     </div>
 </div>
 

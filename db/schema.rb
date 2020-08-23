@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200809000449) do
+ActiveRecord::Schema.define(version: 20200823011411) do
 
   create_table "books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "title"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20200809000449) do
     t.integer  "rating"
     t.integer  "user_id"
     t.integer  "pages",                     default: 0
+    t.text     "isbn",        limit: 65535
     t.index ["user_id"], name: "index_books_on_user_id", using: :btree
   end
 
