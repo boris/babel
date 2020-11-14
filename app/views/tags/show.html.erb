@@ -1,0 +1,5 @@
+<%= render 'books/header' %>
+<h1><%= @tag.name %></h1>
+<% @book.each do |b| %>
+    <%= b.title %><br>
+<% end %>
