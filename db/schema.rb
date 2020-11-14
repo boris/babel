@@ -25,9 +25,7 @@ ActiveRecord::Schema.define(version: 20200809000449) do
     t.text     "borrowed_to", limit: 65535
     t.string   "genre"
     t.integer  "rating"
-    t.integer  "user_id"
     t.integer  "pages",                     default: 0
-    t.index ["user_id"], name: "index_books_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
