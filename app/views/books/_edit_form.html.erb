@@ -55,6 +55,11 @@
                 <%= b.text_field :rating %>
             </div>
 
+            <div class="input-group">
+                <%= b.label :tags, 'Tags: ' %>
+                <%= b.text_field :tag_list, value: b.object.tag_list.to_s %>
+            </div>
+
             <p>
             <%= b.submit "Guardar" %>
             </p>
