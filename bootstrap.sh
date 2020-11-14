@@ -29,11 +29,18 @@ git clone https://github.com/sstephenson/rbenv.git .rbenv
 echo 'export PATH="/home/vagrant/.rbenv/bin:$PATH"' >> .bash_profile
 echo 'eval "$(rbenv init -)"' >> .bash_profile
 git clone https://github.com/sstephenson/ruby-build.git .rbenv/plugins/ruby-build
+rbenv install 2.6.5
+rbenv global 2.6.5
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+source ~/.bash_profile
+gem install bundler
 EOF
 
 echo "Install"
+cd ~/code
 bundle install
 bundle update
 
-echo "Run"
-bundle exec rails s --bind 0.0.0.0
+echo "Run migrations"
+bundle exec rake db:migrate ENV=development
