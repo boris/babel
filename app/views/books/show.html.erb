@@ -23,6 +23,10 @@
             <i class="material-icons" style="font-size:12px;">star</i>
         <% end %>
     </div>
+    <div class="col-sm-3">
+        <b>Tags:</b></br>
+        <%= render @book.tags %>
+    </div>
 </div>
 
 <%= link_to 'Editar', edit_book_path(@book) %> - <%= link_to 'Home', books_path %>
