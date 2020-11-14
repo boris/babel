@@ -11,4 +11,6 @@ class Book < ActiveRecord::Base
 #    country.translations[I18n.locale.to_s] || country.name
   end
 
+  acts_as_taggable_on :tags
+
 end
