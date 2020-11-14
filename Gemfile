@@ -15,6 +15,7 @@ gem 'country_select', github: 'stefanpenner/country_select'
 gem 'tzinfo-data'
 gem 'will_paginate', '~> 3.1.0'
 gem 'execjs'
+gem 'acts-as-taggable-on', '~> 6.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
