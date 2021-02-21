@@ -1,4 +1,9 @@
 <%= render 'books/header' %>
 
 <h1>Tags</h1>
-<%= render @tags %>
+
+<% @tags.order('name ASC').each do |t| %>
+    <ul>
+        <li><%= render t %></li>
+    </ul>
+<% end %>
