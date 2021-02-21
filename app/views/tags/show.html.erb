@@ -1,5 +1,7 @@
 <%= render 'books/header' %>
 <h1><%= @tag.name %></h1>
 <% @book.each do |b| %>
-    <%= b.title %><br>
+    <ul>
+        <li><%= link_to b.title, book_path(b) %></li>
+    </ul>
 <% end %>
