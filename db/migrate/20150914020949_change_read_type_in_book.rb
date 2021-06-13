@@ -1,4 +1,4 @@
-class ChangeReadTypeInBook < ActiveRecord::Migration
+class ChangeReadTypeInBook < ActiveRecord::Migration[6.0]
   def up
     change_column :books, :read, :boolean
   end

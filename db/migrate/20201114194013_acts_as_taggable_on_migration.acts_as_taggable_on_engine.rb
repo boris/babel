@@ -2,7 +2,7 @@
 if ActiveRecord.gem_version >= Gem::Version.new('5.0')
   class ActsAsTaggableOnMigration < ActiveRecord::Migration[4.2]; end
 else
-  class ActsAsTaggableOnMigration < ActiveRecord::Migration; end
+  class ActsAsTaggableOnMigration < ActiveRecord::Migration[6.0]; end
 end
 ActsAsTaggableOnMigration.class_eval do
   def self.up

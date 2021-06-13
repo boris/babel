@@ -1,4 +1,4 @@
-class AddColumnsToBook < ActiveRecord::Migration
+class AddColumnsToBook < ActiveRecord::Migration[6.0]
   def change
     add_column :books, :country, :string
     add_column :books, :editor, :string
