@@ -1,0 +1,17 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 19.03.13
+          docker_layer_chaching: true
+      - run: |
+          TAG=$(git rev-parse --short HEAD)
+          docker build -t boris/babel:id_$TAG .
+          echo "$DOCKER_PASSWORD" \
+              | docker login -u "$DOCKER_LOGIN" \
+                --password-stdin docker.io
+          docker push boris/babel:id_$TAG
