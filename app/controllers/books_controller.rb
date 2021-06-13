@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-    before_filter :authorize
+    before_action :authorize
     helper_method :sort_column
 
     def index
