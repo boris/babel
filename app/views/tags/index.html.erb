@@ -4,6 +4,6 @@
 
 <% @tags.order('name ASC').each do |t| %>
     <ul>
-        <li><%= render t %></li>
+        <li><%= render t %>(<%= @tags.where('`id` = ?', t).map(&:taggings_count).join('') %>)</li>
     </ul>
 <% end %>
