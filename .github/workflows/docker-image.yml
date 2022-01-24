@@ -21,7 +21,7 @@ jobs:
         id: tag
         run: |
           TAG=$(git describe --abbrev=0 --tags)
-          echo "${TAG}"
+          echo "TAG=${TAG}" >> $GITHUB_ENV
       - name: Login to Dockerhub
         uses: docker/login-action@v1
         with:
@@ -31,4 +31,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: false
-          tags: boris/babel:${{steps.tag.outputs.stdout}}
+          tags: boris/babel:${{env.TAG}}
