@@ -16,6 +16,7 @@ jobs:
       - name: Get tag
         id: tag
         uses: dawidd6/action-get-tag@v1
+      - name: Use tag
         run: echo ${{steps.tag.outouts.tag}}
       #- uses: actions/checkout@v2
       #- name: Build the Docker image
