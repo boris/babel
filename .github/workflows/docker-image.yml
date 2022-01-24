@@ -20,7 +20,7 @@ jobs:
           name: ${{github.ref_name}}
           path: Release
       - name: Use tag
-        run: echo ${{github.ref_name}}
+        run: echo ${{git describe --abbrev=0 --tags}}
       #- uses: actions/checkout@v2
       #- name: Build the Docker image
       #  run: docker build . --file Dockerfile --tag my-image-name:id_$(git rev-parse --short HEAD)
