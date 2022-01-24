@@ -15,9 +15,10 @@ jobs:
     steps:
       - name: Get tag
         id: tag
-        uses: dawidd6/action-get-tag@v1
-      - name: Use tag
-        run: echo ${{steps.tag.outouts.tag}}
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{github.ref_name}}
+          path: Release
       #- uses: actions/checkout@v2
       #- name: Build the Docker image
       #  run: docker build . --file Dockerfile --tag my-image-name:id_$(git rev-parse --short HEAD)
