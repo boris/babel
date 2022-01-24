@@ -21,6 +21,5 @@ jobs:
         run: |
           TAG=$(git describe --abbrev=0 --tags)
           echo "The tag is ${TAG}"
-      #- uses: actions/checkout@v2
-      #- name: Build the Docker image
-      #  run: docker build . --file Dockerfile --tag my-image-name:id_$(git rev-parse --short HEAD)
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag my-image:${TAG}
