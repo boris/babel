@@ -2,9 +2,11 @@ name: Docker Image CI
 
 on:
   push:
+    branches:
+      - '*'
     tags:
-    - '[0-9]+.[0-9]+.[0-9]+'
-  
+      - '[0-9]+.[0-9]+.[0-9]+'
+
 jobs:
 
   build:
@@ -20,7 +22,7 @@ jobs:
         strip_v: true
     - name: Use tag
       run: echo ${{steps.tag.outputs.tag}}
-      
+
     #- uses: actions/checkout@v2
     #- name: Build the Docker image
     #  run: docker build . --file Dockerfile --tag boris/babel:$(date +%s)
