@@ -13,14 +13,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Get tag
-        id: tag
-        uses: actions/upload-artifact@v2
+      - name: Git checkout
+        uses: actions/checkout@v2
         with:
-          name: ${{github.ref_name}}
-          path: Release
-      - name: Use tag
-        run: echo ${{git describe --abbrev=0 --tags}}
+          fetch-depth: '0'
+      - name: Get latest tag
+        run: |
+          TAG=$(git describe --abbrev=0 --tags)
+          echo "The tag is ${TAG}"
       #- uses: actions/checkout@v2
       #- name: Build the Docker image
       #  run: docker build . --file Dockerfile --tag my-image-name:id_$(git rev-parse --short HEAD)
