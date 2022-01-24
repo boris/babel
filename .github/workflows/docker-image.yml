@@ -2,9 +2,10 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ 'ft/gh-actions' ]
+    tags:
+      - '*'
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
 
@@ -30,5 +31,5 @@ jobs:
       - name: Build the Docker image
         uses: docker/build-push-action@v2
         with:
-          push: false
+          push: true
           tags: boris/babel:${{env.TAG}}
